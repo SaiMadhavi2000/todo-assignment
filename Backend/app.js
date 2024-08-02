@@ -88,7 +88,7 @@ app.post("/login", async (req, res) => {
   try {
     const { session, error } = await supabase.auth.signIn({ email, password });
     if (error) return res.status(400).json({ error: error.message });
-
+git
     const newSession = new Session({
       userId: session.user.id,
       loginTime: new Date(),
