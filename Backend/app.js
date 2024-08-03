@@ -106,7 +106,7 @@ git
 });
 
 // Create a new to-do item
-app.post("/todos", authenticate, async (req, res) => {
+app.post("/todo", authenticate, async (req, res) => {
   const { text, completed } = req.body;
 
   try {
